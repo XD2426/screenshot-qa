@@ -1,0 +1,13 @@
+# 统一行尾，避免 Windows/Linux 里脚本被改坏
+* text=auto
+
+*.py    text
+*.ps1   text eol=crlf
+*.nsi   text eol=crlf
+*.vbs   text eol=crlf
+*.json  text
+*.md    text
+
+*.png   binary
+*.ico   binary
+*.exe   binary

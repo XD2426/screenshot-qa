@@ -1,0 +1,5 @@
+# 运行截图脚本所需依赖
+# 注意: 不需要 keyboard 库 —— 全局热键由自带的 hotkey.py 用 ctypes 实现
+# (keyboard 0.13.5 在 Python 3.13/3.14 上钩子静默失效, 按了没反应)
+mss>=9.0.1
+pillow>=10.0.0

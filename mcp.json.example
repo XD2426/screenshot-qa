@@ -1,0 +1,16 @@
+{
+  "mcpServers": {
+    "screenshot-fs": {
+      "command": "cmd",
+      "args": [
+        "/c",
+        "npx",
+        "-y",
+        "@modelcontextprotocol/server-filesystem",
+        "D:\\screenshots",
+        "D:\\screenshot-qa"
+      ],
+      "env": {}
+    }
+  }
+}

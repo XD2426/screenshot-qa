@@ -1,0 +1,15 @@
+{
+  "hotkey": "f8",
+  "hotkey_full": "f9",
+  "hotkey_shot": "",
+  "auto_interval": 5,
+  "auto_on_start": false,
+  "auto_skip_identical": false,
+  "output_dir": "D:\\screenshots",
+  "filename_prefix": "shot",
+  "write_latest_alias": true,
+  "max_keep": 500,
+  "beep": true,
+  "log_file": "D:\\screenshots\\_capture.log",
+  "region": null
+}
