@@ -6,6 +6,19 @@
 > 配合文件系统让 AI 助手按固定文件名读取，省去手工截图。
 > 纯本地运行，不联网、不上传任何数据。请自行确认使用场景合规。
 
+---
+
+## 下载
+
+| 方式 | 适合谁 | 操作 |
+|---|---|---|
+| **安装包**（推荐） | 不想装 Python | [ScreenshotQA-Setup-1.2.0.exe](https://github.com/XD2426/screenshot-qa/releases/latest/download/ScreenshotQA-Setup-1.2.0.exe) · ~12.5 MB，双击即装，**每用户安装免 UAC** |
+| **源码** | 想改代码 / 非 Windows | `git clone` 后跑 `install.ps1`，见 [第 1 节](#1-目录结构) |
+
+安装包只含 Windows x64 的 Python 运行时与依赖，无需预装 Python；卸载走「设置 → 应用」或「控制面板 → 程序和功能」。
+
+---
+
 ```
    ┌──────────────┐  F8 开关 ┌────────────────────┐      ┌─────────────────┐
    │  屏幕固定区域 │ ───────► │ capture.py 常驻     │ ───► │ D:\screenshots\ │
@@ -315,7 +328,7 @@ cd D:\screenshot-qa
 一键构建脚本：`packaging\build.ps1`。产出单文件 exe + NSIS 安装包。
 
 ```powershell
-cd D:\workbuddy\2026-09-23-08-55-47\screenshot-qa\packaging
+cd packaging
 .\build.ps1                 # exe + 安装包
 .\build.ps1 -SkipInstaller  # 只出 exe
 ```
@@ -327,7 +340,7 @@ cd D:\workbuddy\2026-09-23-08-55-47\screenshot-qa\packaging
 | 文件 | 大小 | 说明 |
 |---|---|---|
 | `packaging\dist\ScreenshotQA\` | ~50 MB / exe 18.5 MB | **onedir 绿色版文件夹**（整个文件夹一起拷走用，exe 靠同目录的 `_internal\` 运行） |
-| `packaging\dist\ScreenshotQA-Setup-1.2.0.exe` | ~19 MB | 安装包，双击即装 |
+| `packaging\dist\ScreenshotQA-Setup-1.2.0.exe` | ~12.5 MB | 安装包，双击即装（[Release 附件](https://github.com/XD2426/screenshot-qa/releases)） |
 
 > **为什么不用 onefile？** 本机实测：`--onefile` 且 bundle 里含 tkinter（标定/设置窗口，约 1000 个 tcl/tk 数据文件）时，程序在**退出阶段要卡约 25 秒**才能返回（PyInstaller 单文件清理临时目录所致），空脚本 onefile 只要 2.7s、含 PIL 的 2.9s、**含 tkinter 的 onedir 只要 0.38s**。
 > 所以默认改成 `--onedir`；确实需要单文件的加 `-OneFile`（会重现慢退出）。
