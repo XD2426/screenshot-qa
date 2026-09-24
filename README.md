@@ -1,4 +1,4 @@
-# ScreenshotQA — 屏幕固定区域定时截图工具（Windows）
+# ScreenshotQA — 屏幕固定区域定时截图工具（Windows）找工作测评小助手
 
 `F8` 一按开启**每 5 秒自动截图**，再按一次关闭 → 图落到固定目录 → 交给本地 AI 工具（WorkBuddy 等）读图。
 
